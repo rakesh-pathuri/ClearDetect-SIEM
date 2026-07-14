@@ -72,4 +72,4 @@ To verify that the Suricata sensor is actively sniffing traffic and the eAI engi
 
 ### Authorship
 **Developed by:** Rakesh Pathuri
-*Built as a dedicated tool to bridge the gap between complex enterprise Intrusion Detection Systems and accessible, zero-configuration software engineering.*
+*Architected to democratize enterprise-grade network security, empowering small businesses with clear, actionable threat intelligence.*
