@@ -72,4 +72,4 @@ To verify that the Suricata sensor is actively sniffing traffic and the eAI engi
 
 ### Authorship
 **Developed by:** Rakesh Pathuri
-*Architected to democratize enterprise-grade network security, empowering small businesses with clear, actionable threat intelligence.*
+*Built to make enterprise cybersecurity simple and accessible for small businesses.*
