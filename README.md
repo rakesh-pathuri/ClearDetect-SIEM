@@ -15,6 +15,24 @@ Rather than reinventing a proven intrusion detection engine, ClearDetect builds 
 
 ## Project Architecture
 
+### Visual Flow
+
+```mermaid
+graph TD
+    A[Internet / Local Network] -->|Raw Traffic| B(Suricata Sensor)
+    B -->|Generates| C{{eve.json Log}}
+    C -->|Monitored by| D(AI Translator)
+    D -->|API Query| E[Google Gemini LLM]
+    E -->|Plain English Translation| D
+    D -->|Streams to| F[SIEM Web Dashboard]
+    F -->|Displays alerts to| G((End User))
+    
+    style B fill:#e63946,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#1d3557,stroke:#333,stroke-width:2px,color:#fff
+    style E fill:#457b9d,stroke:#333,stroke-width:2px,color:#fff
+    style F fill:#2a9d8f,stroke:#333,stroke-width:2px,color:#fff
+```
+
 The repository contains three main components working together in a unified Docker architecture:
 
 1. **Suricata Network Sensor**: 
