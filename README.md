@@ -18,27 +18,26 @@ This project wraps **Real Suricata** in a Docker container and attaches a **Pyth
 - **eAI Translator Engine (`xai_translator.py`)**: A Python microservice that tails the real `eve.json` file, intercepts alerts, and translates them dynamically.
 - **SIEM Web Dashboard**: A high-density, dark-mode enterprise UI built with HTML/CSS and served via Flask.
 
-## 🚀 Deployment (Requires WSL/Docker)
+## 🚀 Deployment Modes
 
-To run this real enterprise stack on Windows, you **must** have Docker Desktop and WSL (Windows Subsystem for Linux) installed.
+### Option A: Production (Docker/Linux)
+For actual production SOC deployment, use the included Docker orchestration to run the real Suricata network sensor.
+```bash
+docker compose up --build -d
+```
 
-1. **Install WSL (If not already installed):**
-   Run an administrative PowerShell and type:
-   ```bash
-   wsl --install
+### Option B: Evaluation Mode (Windows Native)
+If running locally on a Windows PC where WSL/Docker is unavailable, you can use the built-in Python Telemetry Engine. This engine generates highly realistic Suricata `eve.json` logs to demonstrate the SIEM and eAI translation capabilities natively.
+
+1. **Set up Python Environment:**
+   ```cmd
+   python -m venv .venv
+   .\.venv\Scripts\python.exe -m pip install -r requirements.txt
    ```
-   *Restart your computer after this completes.*
-
-2. **Deploy the Enterprise Stack:**
-   Ensure Docker Desktop is running, then execute:
-   ```bash
-   docker compose up --build -d
-   ```
-
-3. **View the SIEM Console:**
-   Open your browser to: **[http://localhost:8080](http://localhost:8080)**
-
-## 🕵️‍♂️ How to Test the IDS
+2. **Launch the SIEM:**
+   Double-click the `run_siem.bat` file.
+3. **View the Console:**
+   Open **[http://localhost:8080](http://localhost:8080)** in your browser.
 
 To prove the system works, we will use the industry-standard method of intentionally triggering a real Suricata signature.
 

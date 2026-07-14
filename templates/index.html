@@ -3,74 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClearDetect SIEM Console</title>
+    <title>Elastic Security | ClearDetect</title>
     <link rel="stylesheet" href="/static/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     
-    <header class="siem-header">
+    <!-- Top Nav (Kibana Style) -->
+    <header class="kibana-top-nav">
         <div class="logo-area">
-            <span class="logo">ClearDetect SIEM</span>
-            <span class="version">v2.1.0-eAI</span>
+            <div class="logo-box">C</div>
+            <span class="logo-text">Sec Ops</span>
         </div>
-        <div class="global-stats">
-            <div class="stat-box">
-                <span class="stat-label">TOTAL INGESTED</span>
-                <span class="stat-value" id="stat-total">0</span>
-            </div>
-            <div class="stat-box crit-box">
-                <span class="stat-label">CRITICAL EVENTS</span>
-                <span class="stat-value" id="stat-crit">0</span>
-            </div>
-        </div>
-        <div class="header-actions">
-            <button onclick="exportJSON()">Export JSON</button>
-            <div class="status-indicator">SENSOR: <span>ONLINE</span></div>
+        <div class="user-area">
+            <span class="user-circle">A</span>
         </div>
     </header>
 
-    <div class="siem-layout">
-        <!-- Main Log Table -->
-        <main class="log-panel">
-            <div class="panel-toolbar">
-                <input type="text" class="search-bar" placeholder="Search signatures or IPs...">
-                <select class="filter-dropdown">
-                    <option>All Severities</option>
-                    <option>Critical</option>
-                    <option>High</option>
-                </select>
-                <div class="auto-scroll-toggle">
-                    <input type="checkbox" id="autoscroll" checked>
-                    <label for="autoscroll">Auto-Scroll</label>
+    <!-- Secondary Nav -->
+    <nav class="kibana-sub-nav">
+        <div class="tabs">
+            <div class="tab">Overview</div>
+            <div class="tab">Hosts</div>
+            <div class="tab active">Network</div>
+        </div>
+        <div class="nav-controls">
+            <div class="date-picker">Today, 00:00 AM &rarr; Now</div>
+            <button class="btn-refresh" onclick="exportJSON()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Export
+            </button>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-section">
+        <div class="search-input-wrapper">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" class="search-input" placeholder="Search... (e.g. network.name:&quot;foo&quot; AND process.name:&quot;bar&quot;)">
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Metric Cards -->
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value" id="stat-total">0</div>
+                <div class="metric-label">Network Events</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="stat-crit">0</div>
+                <div class="metric-label">Critical Alerts</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">1</div>
+                <div class="metric-label">Active Agents</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="stat-src">0</div>
+                <div class="metric-label">Unique Source IPs</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="stat-dst">0</div>
+                <div class="metric-label">Unique Destination IPs</div>
+            </div>
+        </div>
+
+        <!-- Data Table Area -->
+        <div class="table-section">
+            <div class="table-header">
+                <div class="table-title">
+                    <h2>Live Threat Stream</h2>
+                    <span class="count-badge" id="table-count">0</span>
+                </div>
+                <div class="table-toggles">
+                    <button class="toggle-btn active">Live Stream</button>
+                    <button class="toggle-btn">Historical</button>
                 </div>
             </div>
 
-            <div class="table-wrapper">
-                <table class="siem-table">
+            <div class="table-container">
+                <table class="elastic-table">
                     <thead>
                         <tr>
                             <th width="3%">SEV</th>
-                            <th width="15%">TIMESTAMP</th>
-                            <th width="12%">SRC IP</th>
-                            <th width="12%">DST IP</th>
-                            <th width="28%">SURICATA SIGNATURE</th>
-                            <th width="30%">EXPLAINABLE AI (eAI) ANALYSIS</th>
+                            <th width="15%">Source IP</th>
+                            <th width="15%">Destination IP</th>
+                            <th width="25%">Suricata Signature</th>
+                            <th width="42%">Explainable AI (eAI) Analysis</th>
                         </tr>
                     </thead>
                     <tbody id="log-container">
+                        <!-- Alerts go here -->
                         <tr id="empty-state">
-                            <td colspan="6" class="empty-msg">Awaiting network telemetry on eth0...</td>
+                            <td colspan="5" class="empty-msg">Awaiting network telemetry from Suricata sensor...</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        </main>
-    </div>
+        </div>
+
+    </main>
 
     <script>
         let allAlerts = [];
         let stats = { total: 0, critical: 0 };
+        let uniqueSrc = new Set();
+        let uniqueDst = new Set();
 
         async function fetchAlerts() {
             try {
@@ -85,48 +126,46 @@
                 }
                 
                 const existingNodes = new Set(Array.from(container.children).map(n => n.dataset.timestamp));
-                let newAlertsAdded = false;
 
                 alerts.reverse().forEach(alert => { 
                     if (!existingNodes.has(alert.timestamp)) {
                         allAlerts.push(alert);
                         stats.total++;
+                        uniqueSrc.add(alert.source_ip);
+                        uniqueDst.add(alert.target_ip);
                         
                         const sev = alert.severity.toLowerCase();
-                        let sevCode = "L";
-                        let sevClass = "sev-low";
-                        
-                        if (sev === 'critical') { stats.critical++; sevCode = "C"; sevClass = "sev-crit"; }
-                        else if (sev === 'high') { sevCode = "H"; sevClass = "sev-high"; }
-                        else if (sev === 'medium') { sevCode = "M"; sevClass = "sev-med"; }
+                        let dotClass = "dot-low";
+                        if (sev === 'critical') { stats.critical++; dotClass = "dot-crit"; }
+                        else if (sev === 'high') { dotClass = "dot-high"; }
+                        else if (sev === 'medium') { dotClass = "dot-med"; }
 
                         const tr = document.createElement('tr');
-                        tr.className = `log-row ${sevClass}`;
+                        tr.className = 'log-row';
                         tr.dataset.timestamp = alert.timestamp;
                         
-                        // Extract time from timestamp
-                        const timeMatch = alert.timestamp.match(/T(.*?)\./);
-                        const timeStr = timeMatch ? timeMatch[1] : new Date(alert.timestamp).toLocaleTimeString();
+                        const timeStr = new Date(alert.timestamp).toLocaleTimeString();
 
                         tr.innerHTML = `
-                            <td class="sev-cell"><span class="sev-badge ${sevClass}">${sevCode}</span></td>
-                            <td class="time-cell">${timeStr}</td>
-                            <td class="ip-cell">${alert.source_ip}</td>
-                            <td class="ip-cell">${alert.target_ip}</td>
-                            <td class="sig-cell">${alert.technical_signature}</td>
-                            <td class="eai-cell">
-                                <div class="eai-insight">${alert.plain_english_explanation}</div>
-                                <div class="eai-action">ACT: ${alert.recommended_action}</div>
+                            <td><div class="sev-dot ${dotClass}" title="${alert.severity}"></div></td>
+                            <td><a href="#" class="ip-link">${alert.source_ip}</a><div class="time-sub">${timeStr}</div></td>
+                            <td><a href="#" class="ip-link">${alert.target_ip}</a></td>
+                            <td class="sig-text">${alert.technical_signature}</td>
+                            <td class="eai-text">
+                                <div>${alert.plain_english_explanation}</div>
+                                <div class="eai-action">Action: ${alert.recommended_action}</div>
                             </td>
                         `;
                         container.prepend(tr);
-                        newAlertsAdded = true;
                     }
                 });
 
                 // Update Stats
                 document.getElementById('stat-total').innerText = stats.total;
                 document.getElementById('stat-crit').innerText = stats.critical;
+                document.getElementById('stat-src').innerText = uniqueSrc.size;
+                document.getElementById('stat-dst').innerText = uniqueDst.size;
+                document.getElementById('table-count').innerText = stats.total;
 
             } catch (e) {
                 console.error("Error fetching telemetry", e);
@@ -138,7 +177,7 @@
             const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(allAlerts, null, 2));
             const a = document.createElement('a');
             a.href = dataStr;
-            a.download = "cleardetect_telemetry.json";
+            a.download = "elastic_telemetry_export.json";
             a.click();
         }
 

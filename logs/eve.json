@@ -213,3 +213,253 @@
 {"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:36:37.146797Z"}
 {"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:36:41.147603Z"}
 {"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:37:48.772719Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:37:52.773323Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:37:59.773960Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:38:06.774600Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:38:11.775085Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:38:15.775839Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:38:22.776275Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:38:28.776738Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:38:32.777036Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:38:37.777267Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:38:42.777903Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:38:49.778333Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:38:56.779574Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:39:00.780114Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:39:05.780636Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:39:11.780994Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:39:18.781632Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:39:25.782188Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:39:32.782957Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:39:37.783767Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:39:43.784205Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:39:49.784951Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:39:54.785508Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:40:01.786150Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:40:05.786961Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:40:10.787313Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:40:15.788027Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:40:21.788605Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:40:26.789455Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:40:31.789971Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:40:37.790874Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:40:44.791605Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:40:49.791885Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:40:53.792566Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:41:00.792974Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:41:04.793428Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:41:09.794032Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:41:16.794454Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:41:22.795005Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:41:26.795563Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:41:33.796472Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:41:38.797203Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:41:45.797916Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:41:50.798351Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:41:55.798977Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:42:00.799242Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:42:06.799777Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:42:13.800344Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:42:18.800895Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:42:23.801631Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:42:30.802033Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:42:34.802723Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:42:38.803371Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:42:43.804011Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:42:48.804466Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:42:55.805223Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:43:02.806262Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:43:08.806924Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:43:12.807271Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:43:18.808716Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:43:25.809372Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:43:30.810205Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:43:37.810552Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:43:44.810808Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:43:49.811547Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:43:54.812558Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:44:01.812882Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:44:05.813596Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:44:09.814041Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:44:14.814503Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:44:18.815861Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:44:22.816516Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:44:26.817504Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:44:32.818141Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:44:37.818380Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:44:44.819080Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:44:51.819857Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:44:56.820194Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:45:02.821058Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:45:08.821696Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:45:14.822677Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:45:18.823410Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:45:22.823755Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:45:26.824405Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:45:32.825043Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:45:39.825697Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:45:46.825968Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:45:50.826403Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:45:54.826948Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:46:00.827378Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:46:07.828066Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:46:14.828654Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:46:19.829106Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:46:25.829788Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:46:30.830277Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:46:36.830993Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:46:42.831710Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:46:47.832376Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:46:53.832929Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:47:00.833313Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:47:06.833616Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:47:13.834023Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:47:20.834662Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:47:25.835242Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:47:29.835892Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:47:35.836542Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:47:42.837029Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:47:46.837711Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:47:53.838227Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:47:57.838762Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:48:02.839050Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:48:07.839606Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:48:14.839922Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:48:18.840125Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:48:22.840639Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:48:26.841057Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:48:27.298420Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:48:30.841339Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:48:31.299979Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:48:35.300375Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:48:35.841726Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:48:41.301317Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:48:41.842095Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:48:45.301746Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:48:47.842357Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:48:51.842746Z"}
+{"event_type": "alert", "src_ip": "10.0.0.55", "dest_ip": "198.51.100.23", "alert": {"signature": "ET INFO DNP3 Read Request"}, "timestamp": "2026-07-14T04:48:53.302390Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:48:56.843039Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:48:58.302778Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:49:01.843470Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:49:05.303552Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:49:05.844160Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:49:09.844490Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:49:10.304111Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:49:15.845037Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:49:17.304365Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:49:19.846030Z"}
+{"event_type": "alert", "src_ip": "10.0.0.55", "dest_ip": "198.51.100.23", "alert": {"signature": "ET INFO DNP3 Read Request"}, "timestamp": "2026-07-14T04:49:20.305018Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:49:24.846526Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:49:27.305654Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:49:29.847075Z"}
+{"event_type": "alert", "src_ip": "45.146.164.110", "dest_ip": "10.0.0.12", "alert": {"signature": "ET TROJAN Cobalt Strike Beacon Observed"}, "timestamp": "2026-07-14T04:49:31.306186Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:49:33.847816Z"}
+{"event_type": "alert", "src_ip": "10.0.0.55", "dest_ip": "198.51.100.23", "alert": {"signature": "ET INFO DNP3 Read Request"}, "timestamp": "2026-07-14T04:49:36.306712Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:49:39.848683Z"}
+{"event_type": "alert", "src_ip": "10.0.0.55", "dest_ip": "198.51.100.23", "alert": {"signature": "ET INFO DNP3 Read Request"}, "timestamp": "2026-07-14T04:49:43.307247Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:49:45.849592Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:49:50.850156Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:49:51.307483Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:49:55.308056Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:49:55.851598Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:50:00.852533Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:50:02.308511Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:50:04.853080Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:50:10.308897Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:50:10.853810Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:50:14.309621Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:50:15.854440Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:50:19.855086Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:50:20.310448Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:50:26.855395Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:50:28.310914Z"}
+{"event_type": "alert", "src_ip": "10.0.0.55", "dest_ip": "198.51.100.23", "alert": {"signature": "ET INFO DNP3 Read Request"}, "timestamp": "2026-07-14T04:50:32.312038Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:50:33.855674Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:50:37.312675Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:50:38.856100Z"}
+{"event_type": "alert", "src_ip": "10.0.0.55", "dest_ip": "198.51.100.23", "alert": {"signature": "ET INFO DNP3 Read Request"}, "timestamp": "2026-07-14T04:50:44.313129Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:50:44.857024Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:50:48.857453Z"}
+{"event_type": "alert", "src_ip": "45.146.164.110", "dest_ip": "10.0.0.12", "alert": {"signature": "ET TROJAN Cobalt Strike Beacon Observed"}, "timestamp": "2026-07-14T04:50:51.313510Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:50:53.858080Z"}
+{"event_type": "alert", "src_ip": "10.0.0.55", "dest_ip": "198.51.100.23", "alert": {"signature": "ET INFO DNP3 Read Request"}, "timestamp": "2026-07-14T04:50:59.314076Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:50:59.858354Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:51:03.858997Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:51:06.314911Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:51:10.865146Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:51:11.315243Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:51:14.315900Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:51:17.865654Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:51:21.316473Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:51:24.866236Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:51:26.317329Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:51:28.866780Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:51:33.867295Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:51:34.318046Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:51:40.318376Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:51:40.867856Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:51:44.868114Z"}
+{"event_type": "alert", "src_ip": "10.0.0.55", "dest_ip": "198.51.100.23", "alert": {"signature": "ET INFO DNP3 Read Request"}, "timestamp": "2026-07-14T04:51:48.318793Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:51:48.868760Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:51:55.319122Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:51:55.869553Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:51:58.319601Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:52:02.320329Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:52:02.870633Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:52:06.871319Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:52:10.320863Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:52:10.871667Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:52:16.872151Z"}
+{"event_type": "alert", "src_ip": "45.146.164.110", "dest_ip": "10.0.0.12", "alert": {"signature": "ET TROJAN Cobalt Strike Beacon Observed"}, "timestamp": "2026-07-14T04:52:17.321167Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:52:23.872829Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:52:24.321579Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:52:29.874384Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:52:30.321950Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:52:33.322669Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:52:36.874948Z"}
+{"event_type": "alert", "src_ip": "10.0.0.55", "dest_ip": "198.51.100.23", "alert": {"signature": "ET INFO DNP3 Read Request"}, "timestamp": "2026-07-14T04:52:41.323005Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:52:41.875473Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:52:44.323705Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:52:48.876035Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:52:50.324288Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:52:53.876340Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:52:54.324894Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:52:57.877027Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:53:01.325389Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:53:04.907550Z"}
+{"event_type": "alert", "src_ip": "45.146.164.110", "dest_ip": "10.0.0.12", "alert": {"signature": "ET TROJAN Cobalt Strike Beacon Observed"}, "timestamp": "2026-07-14T04:53:09.326012Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:53:11.908164Z"}
+{"event_type": "alert", "src_ip": "45.146.164.110", "dest_ip": "10.0.0.12", "alert": {"signature": "ET TROJAN Cobalt Strike Beacon Observed"}, "timestamp": "2026-07-14T04:53:13.326735Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:53:16.327228Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:53:17.909040Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:53:19.327953Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:53:21.909282Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:53:26.328356Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:53:28.909916Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:53:29.328916Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:53:32.329375Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:53:32.910179Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:53:38.911049Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:53:40.329856Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:53:45.330349Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:53:45.911653Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:53:48.331010Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:53:52.331466Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:53:52.911926Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:53:55.331703Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:53:58.912363Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:53:59.332044Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:54:04.913091Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:54:07.332642Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:54:08.913702Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:54:10.332972Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:54:13.333585Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:54:14.915524Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:54:16.333861Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:54:18.916047Z"}
+{"event_type": "alert", "src_ip": "10.0.0.8", "dest_ip": "8.8.8.8", "alert": {"signature": "ET POLICY Suspicious outbound DNS query"}, "timestamp": "2026-07-14T04:54:22.334077Z"}
+{"event_type": "alert", "src_ip": "203.0.113.42", "dest_ip": "192.168.1.50", "alert": {"signature": "ET MALWARE Win32/CoinMiner Mac OS X Miner"}, "timestamp": "2026-07-14T04:54:22.916384Z"}
+{"event_type": "alert", "src_ip": "10.0.0.55", "dest_ip": "198.51.100.23", "alert": {"signature": "ET INFO DNP3 Read Request"}, "timestamp": "2026-07-14T04:54:27.334605Z"}
+{"event_type": "alert", "src_ip": "192.168.1.105", "dest_ip": "10.0.0.1", "alert": {"signature": "ET SCAN Nmap OS Detection Probe"}, "timestamp": "2026-07-14T04:54:27.916993Z"}
+{"event_type": "alert", "src_ip": "185.15.59.2", "dest_ip": "10.0.0.5", "alert": {"signature": "ET EXPLOIT Possible CVE-2021-44228 Apache Log4j RCE Attempt"}, "timestamp": "2026-07-14T04:54:30.335270Z"}
