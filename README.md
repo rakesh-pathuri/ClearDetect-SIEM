@@ -5,7 +5,7 @@
 [![Flask](https://img.shields.io/badge/Framework-Flask-green)](https://flask.palletsprojects.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> **Development Context:** This is a project I built to explore how Explainable AI (eAI) can simplify complex enterprise cybersecurity architectures for non-technical small and medium businesses (SMBs). 
+> **Core Goal:** The ultimate objective of this project is to make enterprise-grade cybersecurity stupid-simple. By combining a one-click deployment architecture with an Explainable AI (eAI) translation layer, this tool enables non-technical small and medium business owners to actively monitor their networks without needing a dedicated cybersecurity team.
 
 ## Overview
 
@@ -72,4 +72,4 @@ To verify that the Suricata sensor is actively sniffing traffic and the eAI engi
 
 ### Authorship
 **Developed by:** Rakesh Pathuri
-*Built as a portfolio project to bridge the gap between enterprise Intrusion Detection Systems and accessible software engineering.*
+*Built as a dedicated tool to bridge the gap between complex enterprise Intrusion Detection Systems and accessible, zero-configuration software engineering.*
