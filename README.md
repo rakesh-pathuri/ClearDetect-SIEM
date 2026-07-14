@@ -86,7 +86,7 @@ To verify that the Suricata sensor is actively sniffing traffic and the eAI engi
 
 ### Open Source Credits
 
-This project is built on the shoulders of giants. The core packet-sniffing engine used in this repository is powered by **Suricata** ([OISF](https://suricata.io/)), a world-class, high-performance, open-source network analysis and threat detection engine. We extend our deepest gratitude to the Open Information Security Foundation and the Suricata community for maintaining such an incredible open-source security tool.
+The core packet-sniffing engine used in this repository is powered by **Suricata** ([OISF](https://suricata.io/)), a world-class, high-performance, open-source network analysis and threat detection engine. We extend our deepest gratitude to the Open Information Security Foundation and the Suricata community for maintaining such an incredible open-source security tool.
 
 ---
 
