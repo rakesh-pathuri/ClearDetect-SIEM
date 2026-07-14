@@ -14,4 +14,4 @@ COPY . .
 EXPOSE 8080
 
 # Run the Translator Engine
-CMD ["python", "xai_translator.py"]
+CMD ["python", "eai_translator.py"]

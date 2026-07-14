@@ -9,7 +9,7 @@ Most enterprise security tools output highly technical logs that require a dedic
 The system consists of three main components:
 
 1. Suricata Sensor: A Docker container that monitors network traffic and outputs technical alerts to a log file.
-2. Translation Engine: A Python service that constantly monitors the Suricata logs, intercepts new alerts, and translates them into plain English.
+2. Translation Engine (`eai_translator.py`): A Python service that constantly monitors the Suricata logs, intercepts new alerts, and translates them into plain English.
 3. SIEM Dashboard: A professional, dark-theme web interface that displays the translated alerts in real-time.
 
 ## Deployment Instructions
