@@ -3,76 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XAI-IDS Enterprise Console</title>
+    <title>ClearDetect SIEM Console</title>
     <link rel="stylesheet" href="/static/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     
-    <!-- Top Navigation Bar -->
-    <nav class="top-nav">
-        <div class="nav-left">
-            <span class="logo-box">🛡️ XAI-IDS</span>
-            <span class="nav-title">Security Operations Console</span>
+    <header class="siem-header">
+        <div class="logo-area">
+            <span class="logo">ClearDetect SIEM</span>
+            <span class="version">v2.1.0-eAI</span>
         </div>
-        <div class="nav-right">
-            <div class="status-badge">
-                <span class="status-dot"></span> Suricata Sensor: ACTIVE
+        <div class="global-stats">
+            <div class="stat-box">
+                <span class="stat-label">TOTAL INGESTED</span>
+                <span class="stat-value" id="stat-total">0</span>
             </div>
-            <div class="user-profile">Administrator</div>
+            <div class="stat-box crit-box">
+                <span class="stat-label">CRITICAL EVENTS</span>
+                <span class="stat-value" id="stat-crit">0</span>
+            </div>
         </div>
-    </nav>
+        <div class="header-actions">
+            <button onclick="exportJSON()">Export JSON</button>
+            <div class="status-indicator">SENSOR: <span>ONLINE</span></div>
+        </div>
+    </header>
 
-    <div class="app-container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <ul class="nav-links">
-                <li class="active">Overview</li>
-                <li>Threat Intelligence</li>
-                <li>Sensor Management</li>
-                <li>XAI Policies</li>
-                <li>Reports</li>
-            </ul>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <div class="page-header">
-                <h2>Real-Time Threat Analysis</h2>
-                <p>AI-translated intrusion events from Suricata IDS</p>
+    <div class="siem-layout">
+        <!-- Main Log Table -->
+        <main class="log-panel">
+            <div class="panel-toolbar">
+                <input type="text" class="search-bar" placeholder="Search signatures or IPs...">
+                <select class="filter-dropdown">
+                    <option>All Severities</option>
+                    <option>Critical</option>
+                    <option>High</option>
+                </select>
+                <div class="auto-scroll-toggle">
+                    <input type="checkbox" id="autoscroll" checked>
+                    <label for="autoscroll">Auto-Scroll</label>
+                </div>
             </div>
 
-            <!-- Enterprise Data Table / Alert Stack -->
-            <div class="alert-panel">
-                <div class="panel-header">
-                    <h3>Active Security Alerts</h3>
-                    <div class="filters">
-                        <select><option>All Severities</option><option>Critical</option></select>
-                        <button class="btn-refresh" onclick="fetchAlerts()">Force Refresh</button>
-                    </div>
-                </div>
-                
-                <div class="table-container">
-                    <table class="alert-table">
-                        <thead>
-                            <tr>
-                                <th width="15%">SEVERITY / TIME</th>
-                                <th width="45%">EXPLAINABLE AI (XAI) ANALYSIS & ACTION</th>
-                                <th width="40%">TECHNICAL CONTEXT</th>
-                            </tr>
-                        </thead>
-                        <tbody id="log-container">
-                            <tr id="empty-state">
-                                <td colspan="3" style="text-align:center; color:#64748b; padding: 3rem;">Awaiting sensor data...</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <div class="table-wrapper">
+                <table class="siem-table">
+                    <thead>
+                        <tr>
+                            <th width="3%">SEV</th>
+                            <th width="15%">TIMESTAMP</th>
+                            <th width="12%">SRC IP</th>
+                            <th width="12%">DST IP</th>
+                            <th width="28%">SURICATA SIGNATURE</th>
+                            <th width="30%">EXPLAINABLE AI (eAI) ANALYSIS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="log-container">
+                        <tr id="empty-state">
+                            <td colspan="6" class="empty-msg">Awaiting network telemetry on eth0...</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </main>
     </div>
 
     <script>
+        let allAlerts = [];
+        let stats = { total: 0, critical: 0 };
+
         async function fetchAlerts() {
             try {
                 const response = await fetch('/api/alerts');
@@ -85,49 +84,65 @@
                     emptyState.remove();
                 }
                 
-                // Track existing alerts to avoid full DOM redraws based on timestamp
                 const existingNodes = new Set(Array.from(container.children).map(n => n.dataset.timestamp));
-                
+                let newAlertsAdded = false;
+
                 alerts.reverse().forEach(alert => { 
                     if (!existingNodes.has(alert.timestamp)) {
+                        allAlerts.push(alert);
+                        stats.total++;
+                        
+                        const sev = alert.severity.toLowerCase();
+                        let sevCode = "L";
+                        let sevClass = "sev-low";
+                        
+                        if (sev === 'critical') { stats.critical++; sevCode = "C"; sevClass = "sev-crit"; }
+                        else if (sev === 'high') { sevCode = "H"; sevClass = "sev-high"; }
+                        else if (sev === 'medium') { sevCode = "M"; sevClass = "sev-med"; }
+
                         const tr = document.createElement('tr');
-                        tr.className = `alert-row severity-${alert.severity.toLowerCase()}`;
+                        tr.className = `log-row ${sevClass}`;
                         tr.dataset.timestamp = alert.timestamp;
                         
+                        // Extract time from timestamp
+                        const timeMatch = alert.timestamp.match(/T(.*?)\./);
+                        const timeStr = timeMatch ? timeMatch[1] : new Date(alert.timestamp).toLocaleTimeString();
+
                         tr.innerHTML = `
-                            <td class="col-meta">
-                                <span class="severity-badge ${alert.severity.toLowerCase()}">${alert.severity.toUpperCase()}</span>
-                                <div class="timestamp">${new Date(alert.timestamp).toLocaleTimeString()}</div>
-                            </td>
-                            <td class="col-xai">
-                                <div class="xai-insight">
-                                    <strong>Insight:</strong> ${alert.plain_english_explanation}
-                                </div>
-                                <div class="xai-action">
-                                    <strong>Action:</strong> ${alert.recommended_action}
-                                </div>
-                            </td>
-                            <td class="col-technical">
-                                <div class="tech-row">
-                                    <span class="tech-label">SRC:</span> <span class="ip-text">${alert.source_ip}</span>
-                                </div>
-                                <div class="tech-row">
-                                    <span class="tech-label">DST:</span> <span class="ip-text">${alert.target_ip}</span>
-                                </div>
-                                <div class="tech-row">
-                                    <span class="tech-label">SIG:</span> <span class="sig-text">${alert.technical_signature}</span>
-                                </div>
+                            <td class="sev-cell"><span class="sev-badge ${sevClass}">${sevCode}</span></td>
+                            <td class="time-cell">${timeStr}</td>
+                            <td class="ip-cell">${alert.source_ip}</td>
+                            <td class="ip-cell">${alert.target_ip}</td>
+                            <td class="sig-cell">${alert.technical_signature}</td>
+                            <td class="eai-cell">
+                                <div class="eai-insight">${alert.plain_english_explanation}</div>
+                                <div class="eai-action">ACT: ${alert.recommended_action}</div>
                             </td>
                         `;
                         container.prepend(tr);
+                        newAlertsAdded = true;
                     }
                 });
+
+                // Update Stats
+                document.getElementById('stat-total').innerText = stats.total;
+                document.getElementById('stat-crit').innerText = stats.critical;
+
             } catch (e) {
-                console.error("Error fetching alerts", e);
+                console.error("Error fetching telemetry", e);
             }
         }
 
-        setInterval(fetchAlerts, 2000);
+        function exportJSON() {
+            if (allAlerts.length === 0) return alert("No telemetry to export.");
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(allAlerts, null, 2));
+            const a = document.createElement('a');
+            a.href = dataStr;
+            a.download = "cleardetect_telemetry.json";
+            a.click();
+        }
+
+        setInterval(fetchAlerts, 1000);
         fetchAlerts();
     </script>
 </body>
