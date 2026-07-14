@@ -84,6 +84,10 @@ To verify that the Suricata sensor is actively sniffing traffic and the eAI engi
 
    *This script forces the Suricata Docker container to ping a known malicious test URL (`testmyids.com`). You will instantly see the resulting translated alert populate on your Live Threat Stream dashboard.*
 
+### Open Source Credits
+
+This project is built on the shoulders of giants. The core packet-sniffing engine used in this repository is powered by **Suricata** ([OISF](https://suricata.io/)), a world-class, high-performance, open-source network analysis and threat detection engine. We extend our deepest gratitude to the Open Information Security Foundation and the Suricata community for maintaining such an incredible open-source security tool.
+
 ---
 
 ### Authorship
