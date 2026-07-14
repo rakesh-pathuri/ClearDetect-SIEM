@@ -12,29 +12,18 @@
     <!-- Top Nav (Kibana Style) -->
     <header class="kibana-top-nav">
         <div class="logo-area">
-            <div class="logo-box">C</div>
-            <span class="logo-text">Sec Ops</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00bfb3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span class="logo-text">ClearDetect SIEM</span>
         </div>
         <div class="user-area">
-            <span class="user-circle">A</span>
-        </div>
-    </header>
-
-    <!-- Secondary Nav -->
-    <nav class="kibana-sub-nav">
-        <div class="tabs">
-            <div class="tab">Overview</div>
-            <div class="tab">Hosts</div>
-            <div class="tab active">Network</div>
-        </div>
-        <div class="nav-controls">
-            <div class="date-picker">Today, 00:00 AM &rarr; Now</div>
             <button class="btn-refresh" onclick="exportJSON()">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                Export
+                Export JSON
             </button>
         </div>
-    </nav>
+    </header>
 
     <!-- Search Bar -->
     <div class="search-section">
@@ -77,10 +66,6 @@
                 <div class="table-title">
                     <h2>Live Threat Stream</h2>
                     <span class="count-badge" id="table-count">0</span>
-                </div>
-                <div class="table-toggles">
-                    <button class="toggle-btn active">Live Stream</button>
-                    <button class="toggle-btn">Historical</button>
                 </div>
             </div>
 

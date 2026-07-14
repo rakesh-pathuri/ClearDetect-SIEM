@@ -31,6 +31,22 @@ body {
     flex-direction: column;
 }
 
+/* CUSTOM DARK SCROLLBAR */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-page);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--border-hover);
+}
+
 /* TOP NAV */
 .kibana-top-nav {
     background-color: var(--bg-header);
@@ -38,52 +54,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 16px;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.logo-area { display: flex; align-items: center; gap: 12px; }
-.logo-box { 
-    background-color: #00bfb3; color: #fff; font-weight: 700;
-    width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;
-    border-radius: 4px; font-size: 14px;
-}
-.logo-text { font-weight: 600; font-size: 14px; color: var(--text-primary); }
-
-.user-area { display: flex; align-items: center; }
-.user-circle {
-    background-color: #e5a770; color: #000; font-weight: 600;
-    width: 28px; height: 28px; display: flex; align-items: center; justify-content: center;
-    border-radius: 50%; font-size: 13px;
-}
-
-/* SUB NAV */
-.kibana-sub-nav {
-    background-color: var(--bg-page);
-    height: 52px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 0 24px;
     border-bottom: 1px solid var(--border-color);
 }
 
-.tabs { display: flex; height: 100%; gap: 32px; }
-.tab { 
-    display: flex; align-items: center; font-size: 14px; color: var(--text-secondary);
-    cursor: pointer; position: relative;
-}
-.tab.active { color: var(--text-primary); font-weight: 600; }
-.tab.active::after {
-    content: ''; position: absolute; bottom: -1px; left: 0; right: 0;
-    height: 2px; background-color: var(--accent-blue);
-}
+.logo-area { display: flex; align-items: center; gap: 10px; }
+.logo-text { font-weight: 700; font-size: 15px; color: var(--text-primary); letter-spacing: 0.5px; }
 
-.nav-controls { display: flex; align-items: center; gap: 16px; }
-.date-picker {
-    background: var(--bg-page); border: 1px solid var(--border-color);
-    padding: 6px 12px; border-radius: 4px; color: var(--text-primary); font-size: 12px;
-}
+.user-area { display: flex; align-items: center; }
+
 .btn-refresh {
     background-color: var(--accent-blue); color: #fff; border: none;
     padding: 6px 16px; border-radius: 4px; font-weight: 500; font-size: 13px;
