@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XAI-IDS Enterprise Console</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <div class="nav-left">
+            <span class="logo-box">🛡️ XAI-IDS</span>
+            <span class="nav-title">Security Operations Console</span>
+        </div>
+        <div class="nav-right">
+            <div class="status-badge">
+                <span class="status-dot"></span> Suricata Sensor: ACTIVE
+            </div>
+            <div class="user-profile">Administrator</div>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul class="nav-links">
+                <li class="active">Overview</li>
+                <li>Threat Intelligence</li>
+                <li>Sensor Management</li>
+                <li>XAI Policies</li>
+                <li>Reports</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h2>Real-Time Threat Analysis</h2>
+                <p>AI-translated intrusion events from Suricata IDS</p>
+            </div>
+
+            <!-- Enterprise Data Table / Alert Stack -->
+            <div class="alert-panel">
+                <div class="panel-header">
+                    <h3>Active Security Alerts</h3>
+                    <div class="filters">
+                        <select><option>All Severities</option><option>Critical</option></select>
+                        <button class="btn-refresh" onclick="fetchAlerts()">Force Refresh</button>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table class="alert-table">
+                        <thead>
+                            <tr>
+                                <th width="15%">SEVERITY / TIME</th>
+                                <th width="45%">EXPLAINABLE AI (XAI) ANALYSIS & ACTION</th>
+                                <th width="40%">TECHNICAL CONTEXT</th>
+                            </tr>
+                        </thead>
+                        <tbody id="log-container">
+                            <tr id="empty-state">
+                                <td colspan="3" style="text-align:center; color:#64748b; padding: 3rem;">Awaiting sensor data...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        async function fetchAlerts() {
+            try {
+                const response = await fetch('/api/alerts');
+                const alerts = await response.json();
+                
+                const container = document.getElementById('log-container');
+                const emptyState = document.getElementById('empty-state');
+                
+                if (alerts.length > 0 && emptyState) {
+                    emptyState.remove();
+                }
+                
+                // Track existing alerts to avoid full DOM redraws based on timestamp
+                const existingNodes = new Set(Array.from(container.children).map(n => n.dataset.timestamp));
+                
+                alerts.reverse().forEach(alert => { 
+                    if (!existingNodes.has(alert.timestamp)) {
+                        const tr = document.createElement('tr');
+                        tr.className = `alert-row severity-${alert.severity.toLowerCase()}`;
+                        tr.dataset.timestamp = alert.timestamp;
+                        
+                        tr.innerHTML = `
+                            <td class="col-meta">
+                                <span class="severity-badge ${alert.severity.toLowerCase()}">${alert.severity.toUpperCase()}</span>
+                                <div class="timestamp">${new Date(alert.timestamp).toLocaleTimeString()}</div>
+                            </td>
+                            <td class="col-xai">
+                                <div class="xai-insight">
+                                    <strong>Insight:</strong> ${alert.plain_english_explanation}
+                                </div>
+                                <div class="xai-action">
+                                    <strong>Action:</strong> ${alert.recommended_action}
+                                </div>
+                            </td>
+                            <td class="col-technical">
+                                <div class="tech-row">
+                                    <span class="tech-label">SRC:</span> <span class="ip-text">${alert.source_ip}</span>
+                                </div>
+                                <div class="tech-row">
+                                    <span class="tech-label">DST:</span> <span class="ip-text">${alert.target_ip}</span>
+                                </div>
+                                <div class="tech-row">
+                                    <span class="tech-label">SIG:</span> <span class="sig-text">${alert.technical_signature}</span>
+                                </div>
+                            </td>
+                        `;
+                        container.prepend(tr);
+                    }
+                });
+            } catch (e) {
+                console.error("Error fetching alerts", e);
+            }
+        }
+
+        setInterval(fetchAlerts, 2000);
+        fetchAlerts();
+    </script>
+</body>
+</html>
