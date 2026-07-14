@@ -5,7 +5,7 @@
 [![Flask](https://img.shields.io/badge/Framework-Flask-green)](https://flask.palletsprojects.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> **Core Goal:** The ultimate objective of this project is to make enterprise-grade cybersecurity stupid-simple. By combining a one-click deployment architecture with an Explainable AI (eAI) translation layer, this tool enables non-technical small and medium business owners to actively monitor their networks without needing a dedicated cybersecurity team.
+> **Core Goal:** The ultimate objective of this project is to make enterprise-grade cybersecurity stupid-simple. By combining a one-click deployment architecture with an Explainable AI (eAI) translation layer, this tool enables non-technical small and medium business owners to actively monitor their networks without needing a dedicated technical team.
 
 ## Overview
 
@@ -72,4 +72,4 @@ To verify that the Suricata sensor is actively sniffing traffic and the eAI engi
 
 ### Authorship
 **Developed by:** Rakesh Pathuri
-*Built to make enterprise cybersecurity simple and accessible for small businesses.*
+*Built to make enterprise cybersecurity simple and accessible for Small and Medium Enterprises (SMEs).*
