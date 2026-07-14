@@ -19,17 +19,17 @@ Instead, this project leverages **Suricata**, an industry-standard, battle-teste
 
 ## The Explainable AI (eAI) Engine
 
-The core innovation of this repository is the **eAI Translator Service** (`eai_translator.py`). 
+The core feature of this tool is the **eAI Translator Service** (`eai_translator.py`). 
 - **What it does:** The engine actively monitors the highly complex, nested JSON log outputs produced by the Suricata network sensor (`eve.json`).
 - **How we use it:** As soon as Suricata flags a packet, the eAI engine intercepts the event in real-time, extracts the technical metadata (like `ET EXPLOIT Possible CVE-2021-44228`), and maps it through a heuristic NLP pipeline. The result is a plain-English explanation of the attack and a clear, immediate action for the user to take. 
 
-## Research Areas & Domains
+## Technical Domains
 
-This project sits at the intersection of network security and modern artificial intelligence, covering the following core domains:
+This project bridges the gap between network security and modern artificial intelligence, utilizing the following domains:
 
 1. **Network Security & Packet Analysis:** Integrating and deploying enterprise-grade Intrusion Detection Systems (Suricata) for real-time packet sniffing and threat identification.
-2. **Explainable AI (eAI) & NLP:** Bridging the gap between highly technical machine output and human-readable text by developing heuristic translation pipelines for cybersecurity alerts.
-3. **DevOps & Containerization:** Engineering a robust, multi-container orchestration architecture using Docker to ensure absolute cross-platform consistency and one-click deployment for non-technical end users.
+2. **Explainable AI (eAI) & NLP:** Developing heuristic translation pipelines to convert highly technical cybersecurity alerts into human-readable text.
+3. **DevOps & Containerization:** Engineering a robust, multi-container orchestration architecture using Docker to ensure absolute cross-platform consistency and one-click deployment.
 
 ## Core Features
 
