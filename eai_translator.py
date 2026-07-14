@@ -9,7 +9,7 @@ translated_alerts = []
 
 def generate_heuristic_translation(signature):
     """
-    XAI Engine: Uses NLP heuristics to translate ANY technical Suricata signature 
+    eAI Engine: Uses NLP heuristics to translate ANY technical Suricata signature 
     into a plain-English, actionable explanation for SMB owners.
     """
     sig_upper = signature.upper()
@@ -47,23 +47,23 @@ def generate_heuristic_translation(signature):
 
 def translate_suricata_alert(alert_data):
     """
-    Parses the raw JSON and applies the XAI translation.
+    Parses the raw JSON and applies the eAI translation.
     """
     signature = alert_data.get('alert', {}).get('signature', 'Unknown Signature')
     src_ip = alert_data.get('src_ip', 'Unknown')
     dest_ip = alert_data.get('dest_ip', 'Unknown')
     timestamp = alert_data.get('timestamp', 'Unknown Time')
 
-    xai_intel = generate_heuristic_translation(signature)
+    eai_intel = generate_heuristic_translation(signature)
 
     return {
         "timestamp": timestamp,
         "source_ip": src_ip,
         "target_ip": dest_ip,
         "technical_signature": signature,
-        "severity": xai_intel["severity"],
-        "plain_english_explanation": xai_intel["explanation"],
-        "recommended_action": xai_intel["action"]
+        "severity": eai_intel["severity"],
+        "plain_english_explanation": eai_intel["explanation"],
+        "recommended_action": eai_intel["action"]
     }
 
 def tail_suricata_logs():
@@ -99,7 +99,7 @@ def tail_suricata_logs():
                     translated_alerts.insert(0, translated)
                     if len(translated_alerts) > 50:
                         translated_alerts.pop()
-                    print(f"[XAI TRANSLATED] Real Threat Detected: {translated['technical_signature']}")
+                    print(f"[eAI TRANSLATED] Real Threat Detected: {translated['technical_signature']}")
             except json.JSONDecodeError:
                 pass
 
@@ -113,6 +113,6 @@ def get_alerts():
 
 if __name__ == '__main__':
     threading.Thread(target=tail_suricata_logs, daemon=True).start()
-    print("Starting XAI-Translator Dashboard on port 8080...")
+    print("Starting eAI-Translator Dashboard on port 8080...")
     # Bind to 0.0.0.0 so it is accessible when running inside Docker
     app.run(host='0.0.0.0', port=8080, debug=True, use_reloader=False)

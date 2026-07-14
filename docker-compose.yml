@@ -16,10 +16,10 @@ services:
     command: >
       /bin/sh -c "suricata-update && suricata -i eth0"
 
-  # The AI Brain (XAI-Translator)
-  xai-dashboard:
+  # The AI Brain (eAI-Translator)
+  eai-dashboard:
     build: .
-    container_name: xai-dashboard
+    container_name: eai-dashboard
     network_mode: "host"
     volumes:
       - ./logs:/app/logs 
