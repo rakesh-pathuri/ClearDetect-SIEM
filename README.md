@@ -5,11 +5,11 @@
 [![Flask](https://img.shields.io/badge/Framework-Flask-green)](https://flask.palletsprojects.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> **Core Goal:** The ultimate objective of this project is to make enterprise-grade cybersecurity stupid-simple. By combining a one-click deployment architecture with an Explainable AI (eAI) translation layer, this tool enables non-technical small and medium business owners to actively monitor their networks without needing a dedicated technical team.
+> **Core Goal:** The ultimate objective of this project is to make enterprise-grade security stupid-simple. By combining a simple setup architecture with an Explainable AI (eAI) translation layer, this tool enables non-technical small and medium business owners to actively monitor their networks without needing a dedicated technical team.
 
 ## Overview
 
-In traditional cybersecurity, enterprise tools like Security Information and Event Management (SIEM) systems output highly complex, technical logs. Understanding these logs usually requires a dedicated, full-time cybersecurity team, which leaves small businesses unprotected.
+In traditional security, enterprise tools like Security Information and Event Management (SIEM) systems output highly complex, technical logs. Understanding these logs usually requires a dedicated, full-time security team, which leaves small businesses unprotected.
 
 This project solves that gap. Instead of building a new Intrusion Detection System from scratch, it leverages **Suricata** (an industry-standard threat engine) and layers a custom **Explainable AI (eAI)** translation pipeline on top of it. When Suricata flags a packet, the eAI engine intercepts the technical alert, translates it into plain English, and provides immediate, actionable remediation steps for the business owner via a clean web dashboard.
 
@@ -48,7 +48,7 @@ Make sure you have `Docker Desktop` and `git` installed on your machine.
    ```
 
 2. **Deploy the Architecture:**
-   *ClearDetect is built for absolute simplicity. Deploy the entire orchestrated stack with a single command:*
+   *ClearDetect is built for absolute simplicity. Deploy the orchestrated stack with a simple setup command:*
    ```bash
    docker compose up --build -d
    ```
@@ -72,4 +72,4 @@ To verify that the Suricata sensor is actively sniffing traffic and the eAI engi
 
 ### Authorship
 **Developed by:** Rakesh Pathuri
-*Built to make enterprise cybersecurity simple and accessible for Small and Medium Enterprises (SMEs).*
+*Built to make enterprise security simple and accessible for Small and Medium Enterprises (SMEs).*
