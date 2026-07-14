@@ -22,22 +22,31 @@ The repository contains three main components working together in a unified Dock
    - Outputs highly technical JSON telemetry alerts (`eve.json`) when it detects malicious signatures.
 2. **eAI Translator (`eai_translator.py`)**: 
    - A Python microservice that continuously monitors the Suricata log file in real-time.
-   - Extracts technical metadata (e.g., `ET EXPLOIT Possible CVE-2021-44228`) and passes it through an NLP heuristic pipeline to generate human-readable explanations.
+   - Integrating Google's Gemini Large Language Model to dynamically analyze and translate highly technical security alerts into human-readable text.
 3. **SIEM Dashboard**: 
    - A dark-theme, Kibana-inspired web interface built with Flask and plain JavaScript. 
    - Subscribes to the eAI Translator to stream translated cyber alerts live to the browser.
 
+## Core Features
+
+- **Suricata Integration**: Powered by an industry-standard, signature-based IDS engine.
+- **Generative AI Translation**: Uses Google Gemini to convert complex cyber threats into plain English dynamically.
+- **Offline Fallback**: Built-in NLP heuristics guarantee the system continues to work even if the API rate limits or loses connectivity.
+- **Simple Deployment**: Entirely Dockerized. No complex configurations or dependency hell.
+- **Kibana-Style Dashboard**: A sleek, professional dark-theme SIEM interface designed for ultimate data clarity.
+
 ## Technologies Used
 
-- **Network Security**: Suricata IDS
+- **Network Security Engine**: Suricata IDS
+- **Explainable AI Engine**: Google Gemini LLM API (`google-generativeai`)
 - **Orchestration**: Docker, Docker Compose
-- **Web Framework**: Python Flask
-- **Frontend**: HTML5, CSS, Vanilla JavaScript
+- **Backend Translation Service**: Python `Flask`
+- **Frontend Infrastructure**: HTML5, Vanilla CSS, Vanilla JavaScript
 
 ## How to Run Locally
 
 ### Prerequisites
-Make sure you have `Docker Desktop` and `git` installed on your machine.
+Make sure you have **Docker Desktop** installed and running on your system. You will also need a free **Google Gemini API Key** (from Google AI Studio).
 
 ### Setup Steps
 
@@ -47,13 +56,20 @@ Make sure you have `Docker Desktop` and `git` installed on your machine.
    cd ClearDetect-SIEM
    ```
 
-2. **Deploy the Architecture:**
+2. **Configure API Key:**
+   Copy the example environment file and add your Gemini API key:
+   ```bash
+   cp .env.example .env
+   ```
+   *Open the `.env` file and replace `your_api_key_here` with your real key.*
+
+3. **Deploy the Architecture:**
    *ClearDetect is built for absolute simplicity. Deploy the orchestrated stack with a simple setup command:*
    ```bash
    docker compose up --build -d
    ```
 
-3. **Access the Dashboard:**
+4. **Access the Dashboard:**
    Open your web browser and navigate to **`http://localhost:8080`**.
 
 ### Testing the System

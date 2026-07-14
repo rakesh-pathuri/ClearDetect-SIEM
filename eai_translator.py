@@ -3,47 +3,71 @@ import json
 import time
 import threading
 from flask import Flask, render_template, jsonify
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
+# Configure Gemini AI (if key is provided)
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+if GEMINI_API_KEY:
+    import google.generativeai as genai
+    genai.configure(api_key=GEMINI_API_KEY)
+    model = genai.GenerativeModel('gemini-1.5-flash')
 
 app = Flask(__name__)
 translated_alerts = []
 
-def generate_heuristic_translation(signature):
+def generate_fallback_translation(signature):
     """
-    eAI Engine: Uses NLP heuristics to translate ANY technical Suricata signature 
-    into a plain-English, actionable explanation for SMB owners.
+    Fallback Heuristics: Used if the Gemini API key is missing or the API rate limits.
     """
     sig_upper = signature.upper()
-    
-    if any(keyword in sig_upper for keyword in ["MALWARE", "TROJAN", "COINMINER", "RANSOMWARE", "BACKDOOR"]):
-        return {
-            "severity": "Critical",
-            "explanation": "Malicious software (Malware/Trojan) has been detected attempting to communicate or execute on your network. This could lead to data theft or system damage.",
-            "action": "Isolate the affected machine (Target IP) from the network immediately and run a full enterprise antivirus scan."
-        }
-    elif any(keyword in sig_upper for keyword in ["EXPLOIT", "CVE-", "SHELLCODE"]):
-        return {
-            "severity": "High",
-            "explanation": "An attacker is attempting to exploit a known software vulnerability to gain unauthorized access to your systems.",
-            "action": "Verify that all servers and applications are fully updated with the latest security patches. Block the Source IP."
-        }
-    elif any(keyword in sig_upper for keyword in ["SCAN", "PROBE", "NMAP"]):
-        return {
-            "severity": "Medium",
-            "explanation": "An external device is actively scanning your network to map out open ports and identify vulnerabilities. This is often reconnaissance before an attack.",
-            "action": "If the Source IP is not a known IT administrator, ensure your firewall is configured to block unauthorized inbound traffic from it."
-        }
-    elif any(keyword in sig_upper for keyword in ["POLICY", "INFO", "LEAK"]):
-        return {
-            "severity": "Low",
-            "explanation": "Traffic matching a corporate policy violation or potential information leak was detected.",
-            "action": "Review the internal endpoint's activity to ensure no sensitive data is being transmitted insecurely."
-        }
+    if any(k in sig_upper for k in ["MALWARE", "TROJAN", "COINMINER", "RANSOMWARE", "BACKDOOR"]):
+        return {"severity": "Critical", "explanation": "Malicious software detected attempting to communicate.", "action": "Isolate the machine."}
+    elif any(k in sig_upper for k in ["EXPLOIT", "CVE-", "SHELLCODE"]):
+        return {"severity": "High", "explanation": "Attacker attempting to exploit a known vulnerability.", "action": "Verify patches and block IP."}
+    elif any(k in sig_upper for k in ["SCAN", "PROBE", "NMAP"]):
+        return {"severity": "Medium", "explanation": "External device scanning your network for open ports.", "action": "Block unauthorized inbound traffic."}
     else:
-        return {
-            "severity": "Medium",
-            "explanation": "An unusual network pattern was detected that violates standard security rules.",
-            "action": "Monitor the Source IP for further suspicious activity."
-        }
+        return {"severity": "Low", "explanation": "An unusual network pattern was detected.", "action": "Monitor for further activity."}
+
+def generate_ai_translation(signature, src_ip, dest_ip):
+    """
+    True eAI Engine: Queries Google's Gemini LLM to dynamically translate the signature.
+    """
+    if not GEMINI_API_KEY:
+        return generate_fallback_translation(signature)
+        
+    prompt = f"""
+    You are an expert cybersecurity analyst. A Suricata Intrusion Detection System just flagged the following technical signature on a small business's network:
+    
+    Signature: {signature}
+    Source IP: {src_ip}
+    Destination IP: {dest_ip}
+    
+    Translate this threat into plain, simple English for a non-technical business owner. 
+    You must respond ONLY with a raw JSON object in the exact following format, without any markdown formatting or backticks:
+    {{
+        "severity": "Critical/High/Medium/Low",
+        "explanation": "A 1-2 sentence plain-English explanation of what this threat means.",
+        "action": "A 1-sentence simple instruction on what the business owner should do."
+    }}
+    """
+    
+    try:
+        response = model.generate_content(prompt)
+        text = response.text.strip()
+        # Clean up possible markdown code blocks from LLM response
+        if text.startswith("```json"):
+            text = text[7:]
+        if text.endswith("```"):
+            text = text[:-3]
+            
+        return json.loads(text.strip())
+    except Exception as e:
+        print(f"[eAI ERROR] Gemini API failed ({e}). Using fallback heuristics.")
+        return generate_fallback_translation(signature)
 
 def translate_suricata_alert(alert_data):
     """
@@ -54,16 +78,16 @@ def translate_suricata_alert(alert_data):
     dest_ip = alert_data.get('dest_ip', 'Unknown')
     timestamp = alert_data.get('timestamp', 'Unknown Time')
 
-    eai_intel = generate_heuristic_translation(signature)
+    eai_intel = generate_ai_translation(signature, src_ip, dest_ip)
 
     return {
         "timestamp": timestamp,
         "source_ip": src_ip,
         "target_ip": dest_ip,
         "technical_signature": signature,
-        "severity": eai_intel["severity"],
-        "plain_english_explanation": eai_intel["explanation"],
-        "recommended_action": eai_intel["action"]
+        "severity": eai_intel.get("severity", "Medium"),
+        "plain_english_explanation": eai_intel.get("explanation", "Threat detected."),
+        "recommended_action": eai_intel.get("action", "Monitor network.")
     }
 
 def tail_suricata_logs():

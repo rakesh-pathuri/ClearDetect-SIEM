@@ -21,6 +21,8 @@ services:
     build: .
     container_name: eai-dashboard
     network_mode: "host"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
     volumes:
       - ./logs:/app/logs 
     depends_on:
